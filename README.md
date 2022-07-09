@@ -10,8 +10,17 @@ configuration of applications like the `starship` prompt,
 
 ```bash
 cd $HOME && \
-git clone git@github.com/smc181002/dotfiles.git
+git clone --recursive git@github.com/smc181002/dotfiles.git
 ```
+
+After cloning, sometimes submodules branches may be 
+changed, so run this command after it:
+
+```bash
+git submodule foreach "git checkout master" # or main
+```
+
+Ref: [stackoverflow](https://stackoverflow.com/a/54229189/12335360)
 
 ## Commands used
 
