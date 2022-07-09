@@ -1,0 +1,1 @@
+/home/smc181002/.bashrc
