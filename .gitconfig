@@ -1,1 +1,5 @@
-/home/smc181002/.gitconfig
+[init]
+	defaultBranch = main
+[user]
+	email = meherchaitanya18802@gmail.com
+	name = smc181002
