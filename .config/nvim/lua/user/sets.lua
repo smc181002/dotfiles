@@ -20,6 +20,7 @@ local options = {
     relativenumber = true,
     nu = true,
     cursorline = false,
+    -- ve = "all",
 }
 
 for k, v in pairs(options) do

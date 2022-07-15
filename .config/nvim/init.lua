@@ -5,6 +5,11 @@ require "user.cmp"
 require "user.lsp"
 require "user.telescope"
 require "user.treesitter"
+
+-- DISABLED PLUGINS
+-- require "user.venn"
+
+-- DELETED PLUGINS
 --[[ require "user.lualine"
 require "user.nvim-tree"
 require "user.telescope-file-browser"
