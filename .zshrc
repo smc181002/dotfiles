@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -85,11 +85,22 @@ plugins=(git)
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+#   export EDITOR='nvim'
 # fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+#
+# Bun javascript runtime
+export DENO_INSTALL="/home/smc181002/.deno"
+export BUN_INSTALL="/home/smc181002/.bun"
+# binaries
+export PATH=$PATH:$HOME/.yarn/bin:$HOME/go/bin:$HOME/.cargo/bin:$BUN_INSTALL/bin:$DENO_INSTALL/bin
+
+
+# RUSTIFY
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -104,7 +115,10 @@ alias ls="exa"
 alias la="exa -a"
 
 # internship setup
-alias intern="cd /home/smc181002/data/cloud-n-smart-labs/internship"
+alias intern="z /home/smc181002/data/cloud-n-smart-labs/internship"
+alias github="z /home/smc181002/data/github"
+alias ceol="z /home/smc181002/data/ceol/"
+alias courses="z /home/smc181002/data/courses/"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -121,21 +135,11 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# Bun javascript runtime
-export DENO_INSTALL="/home/smc181002/.deno"
-BUN_INSTALL="/home/smc181002/.bun"
-
 activate="conda activate"
 # using conda environments
 alias base="$activate"
 alias dataanalysis="$activate data-analysis"
 
-# binaries
-export PATH=$PATH:$HOME/.yarn/bin:$HOME/go/bin:$HOME/.cargo/bin:$BUN_INSTALL/bin:$DENO_INSTALL/bin
-
-# RUSTIFY
-eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
 
 # skipping words with ctrl+arrows
 bindkey '^[[1;5D' backward-word
