@@ -3,3 +3,6 @@
 [user]
 	email = meherchaitanya18802@gmail.com
 	name = smc181002
+	signingkey = 087AEE7DEDAD9E1C
+[gpg]
+	program = gpg2

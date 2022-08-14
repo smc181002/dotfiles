@@ -96,6 +96,7 @@ export DENO_INSTALL="/home/smc181002/.deno"
 export BUN_INSTALL="/home/smc181002/.bun"
 # binaries
 export PATH=$PATH:$HOME/.yarn/bin:$HOME/go/bin:$HOME/.cargo/bin:$BUN_INSTALL/bin:$DENO_INSTALL/bin
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
 
 
 # RUSTIFY
@@ -145,3 +146,4 @@ alias dataanalysis="$activate data-analysis"
 bindkey '^[[1;5D' backward-word
 bindkey '^[[1;5C' forward-word
 
+export GPG_TTY=$(tty)
